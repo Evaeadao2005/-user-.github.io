@@ -12,16 +12,15 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             height: 100vh;
-            margin: 0;
-            color: #fff;
             background: url('https://raw.githubusercontent.com/Evaeadao2005/evaeadao2005.github.io/Site/images/860.jfif') no-repeat center center/cover;
-            position: relative;
-            overflow: hidden;
+            color: #fff;
         }
         body::before {
             content: "";
@@ -30,160 +29,98 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 87, 34, 0.8);
-            z-index: 1;
+            background: rgba(255, 87, 34, 0.85);
+            z-index: -1;
         }
         .container {
-            position: relative;
-            z-index: 2;
             text-align: center;
             background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
+            padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             max-width: 400px;
-            width: 90%;
-            margin: 10px;
-            animation: fadeIn 1s ease-out;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         .container img {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            margin: 20px auto;
-            animation: rotate 4s linear infinite;
-            transition: opacity 0.3s ease;
+            margin-bottom: 20px;
         }
         .container h1 {
+            font-size: 22px;
             color: #FF5722;
-            font-size: 24px;
-            margin-bottom: 20px;
-            animation: slideInLeft 1s ease-out;
+            margin-bottom: 10px;
         }
         .container p {
+            font-size: 15px;
             color: #555;
-            font-size: 16px;
-            margin-bottom: 20px;
-            animation: slideInRight 1s ease-out;
+            margin: 10px 0;
         }
         .container a {
             display: inline-block;
-            padding: 12px 25px;
-            font-size: 16px;
-            background-color: #FF5722;
-            color: white;
+            margin: 10px 5px;
+            padding: 12px 18px;
+            font-size: 14px;
+            color: #fff;
             text-decoration: none;
             border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
         .container a:first-of-type {
-            animation: pulse 2s infinite;
+            background-color: #FF5722;
         }
         .container a:last-of-type {
             background-color: #4CAF50;
-            margin-top: 10px;
         }
         .container a:hover {
-            background-color: #E64A19;
-            transform: scale(1.05);
-        }
-        .container a:last-of-type:hover {
-            background-color: #388E3C;
-            transform: none;
+            opacity: 0.9;
         }
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background-color: #FF5722;
             color: #fff;
-            font-size: 14px;
+            font-size: 13px;
+            width: 100%;
             position: fixed;
             bottom: 0;
-            width: 100%;
         }
         footer a {
             color: #FFD54F;
             text-decoration: none;
+            font-weight: 500;
         }
         footer a:hover {
             text-decoration: underline;
         }
         @media (max-width: 600px) {
             .container {
-                padding: 20px;
+                width: 90%;
+                padding: 15px;
             }
             .container h1 {
-                font-size: 20px;
+                font-size: 18px;
             }
             .container p {
-                font-size: 14px;
-            }
-            .container a {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        @keyframes slideInLeft {
-            from {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
+                font-size: 13px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="/images/logo.png" alt="Logo da Pizzaria Diferenciado em Juazeiro do Norte">
+        <img src="/images/logo.png" alt="Logo Pizzaria Diferenciado">
         <h1>Aviso Importante</h1>
-        <p>Para agilizar seu atendimento, pedimos que faça seu pedido pelo nosso cardápio digital antes de entrar em contato pelo WhatsApp.</p>
-        <p>O atendimento pelo WhatsApp pode passar por uma fila de espera.</p>
+        <p>Para agilizar seu atendimento, faça seu pedido no cardápio digital antes de entrar em contato pelo WhatsApp.</p>
+        <p>O atendimento via WhatsApp pode incluir fila de espera.</p>
         <a href="https://juazeirodonorte.pizzariadiferenciado.com" target="_blank">Ver Cardápio Digital</a>
-        <a href="https://api.whatsapp.com/send?phone=5588997480449&text=Ol%C3%A1%20Pizzaria%20Diferenciado%2C%20eu%20vim%20pelo%20Instagram%20e%20desejo%20atendimento!" target="_blank">Ir para o WhatsApp</a>
+        <a href="https://api.whatsapp.com/send?phone=5588997480449&text=Ol%C3%A1%20Pizzaria%20Diferenciado%2C%20desejo%20atendimento!" target="_blank">Ir para o WhatsApp</a>
     </div>
     <footer>
         <p>© 2024 Pizzaria Diferenciado - Juazeiro do Norte</p>
-        <p>📍 RUA MONSENHOR JUVINIANO BARRETO, 137 - Centro, Juazeiro do Norte - CE</p>
+        <p>📍 RUA MONSENHOR JUVINIANO BARRETO, 137 - Centro</p>
         <p>☎️ <a href="tel:+5588997480449">+55 88 99748-0449</a> | 🌐 <a href="https://juazeirodonorte.pizzariadiferenciado.com" target="_blank">Site Oficial</a></p>
-        <p>Desenvolvido com ❤️ por <a href="https://instagram.com/agenciadalmon" target="_blank">Agência Dalmon - @AgênciaDalmon</a></p>
+        <p>Desenvolvido por <a href="https://instagram.com/agenciadalmon" target="_blank">Agência Dalmon</a></p>
     </footer>
 </body>
 </html>
